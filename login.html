@@ -14,11 +14,20 @@
     <form action="POST" class="center">
         <h1 id="connexion">Connexion</h1>
         <h2>Entrez votre adresse email et votre mot de passe</h2>
-        <label for="id" class="champs">Adresse mail étudiante</label><br>
-        <input type="text" id="id" class="champs" placeholder="jean.moulin" pattern="[\w_-]{0,}[.]{1}[\w_-]{0,}" title="prénom.nom" required>@etu.univ-tours.fr<br>
-        <label for="password" class="champs">Mot de passe Uni-Vers</label><br>
-        <input type="text" class="champs" id="password" pattern="[\w_.!,?*@;:-]{8,30}" title="8 caractères min, 30 max et signe dans _.!,?@*;:-" required><br>
-        <input type="submit" id="valider" class="champs" value="Se connecter">
+        <fieldset>
+            <legend>Email étudiant :</legend>
+            <input type="text" id="id" class="champs" placeholder="sarah.croche" pattern="[\w_-]{0,}[.]{1}[\w_-]{0,}" title="'prénom.nom'" required>
+            @etu.univ-tours.fr<br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Mot de passe :</legend>
+            <input type="text" class="champs" id="password" pattern="[\w_.!,?*@;:-]{8,30}" title="8 caractères min, 30 max et signe dans _.!,?@*;:-" required><br>
+        </fieldset>
+        <input type="submit" id="valider" class="champs" value="Se connecter"><br>
+        <div id="divinscrire"><a href="register.html" id="inscrire">Créer un compte</a></div>
     </form>
+    
+
 </body>
 </html>
