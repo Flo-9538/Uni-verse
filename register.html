@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="all" href="login.css">
-    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />    
-    <title>Connexion</title>
+    <title>Créer un compte</title>
 </head>
 <body>
     <p>
@@ -14,9 +13,12 @@
              src="UnivTours.png" /></p>
 
     <form action="POST" class="center">
-        <h1 id="connexion">Connexion</h1>
-        <hr>
-        <h2>Entrez votre adresse email et votre mot de passe</h2>
+        <h1 id="connexion">Créer un compte</h1>
+        <fieldset>
+            <legend>Nom d'utilisateur</legend>
+            <input type="text" class="champs" pattern="[\w_.-]{2,30}" title="2 caractères min, 20 max et signe dans _.-" required>
+        </fieldset>
+
         <fieldset>
             <legend>Email étudiant :</legend>
             <input type="text" id="id" class="champs" placeholder="sarah.croche" pattern="[\w_-]{0,}[.]{1}[\w_-]{0,}" title="'prénom.nom'" required>
@@ -26,11 +28,9 @@
         <fieldset>
             <legend>Mot de passe :</legend>
             <input type="password" class="champs" id="password" pattern="[\w_.!,?*@;:-]{8,30}" title="8 caractères min, 30 max et charactère spécial dans _.!,?@*;:-" required>
-            <input type="button" onclick="myFunction()">
-            <i class="mdi-eye"></i>
         </fieldset>
-        <input type="submit" id="valider" class="champs" value="Se connecter"><br>
-        <div id="divinscrire">Pas encore inscrit ? <a href="register.html" id="inscrire">Créer un compte</a></div>
+        <input type="submit" id="valider" class="champs" value="S'inscrire"><br>
+        <div id="divinscrire">déja inscrit ? <a href="login.html" id="inscrire">Connexion</a></div>
     </form>
     
 
