@@ -19,7 +19,7 @@
         <h2>Entrez votre adresse email et votre mot de passe</h2>
         <fieldset>
             <legend>Email étudiant :</legend>
-            <input type="text" class="champs" placeholder="sarah.croche" pattern="[\w_-]{0,}[.]{1}[\w_-]{0,}" title="'prénom.nom'" required>
+            <input type="text" id="email" class="champs" placeholder="sarah.croche" pattern="[\w_-]{0,}[.]{1}[\w_-]{0,}" title="'prénom.nom'" required>
             @etu.univ-tours.fr<br>
         </fieldset>
         <div id="passDiv">
@@ -31,14 +31,29 @@
             </div>
 
             <div id="droite">
-                <button style="font-size:24px" type="button" id="showPass" onclick="myFunction()"><i class="fa fa-eye-slash" style="font-size:36px"></i></button>
+                <button style="font-size:24px" type="button" id="showPass"><i class="fa fa-eye" id="icon" style="font-size:36px"></i></button>
             </div>
         </div>
 
         <input type="submit" id="valider" value="Se connecter"><br>
         <div id="divinscrire">Pas encore inscrit ? <a href="register.html" id="inscrire">Créer un compte</a></div>
     </form>
-    
+
+    <script>
+        const togglePassword = document.getElementById("showPass");
+        const password = document.getElementById("password");
+        const icon = document.getElementById("icon");
+        
+
+        togglePassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            
+            // toggle the icon
+            icon.classList.toggle("fa-eye-slash");
+        });
+    </script>
 
 </body>
 </html>
