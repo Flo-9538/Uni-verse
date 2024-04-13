@@ -3,7 +3,7 @@ body{
 }
 
 #UnivTours{
-    width: 50%;
+    width: 40%;
     height: auto;
     display: block;
     margin: auto;
@@ -21,21 +21,48 @@ h2{
     margin: 5% 1%;
 }
 
-.center{
+#center{
     border: none;
     background-color: white;
     border-radius: 10px;
     margin: auto;
-    width: 50%;
+    width: 600px;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
+
+#password{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    border: none;
+    padding: 10px;
+    width: 93%;
+    outline: none;
+}
 
 .champs{
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     border: none;
     padding: 10px;
+    width: 70%;
+    outline: none;
+}
+
+#passDiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+
+#gauche{
+    grid-column: 1;
+}
+
+#droite{
+    grid-column: 2;
 }
 
 fieldset{
@@ -50,9 +77,32 @@ fieldset:hover{
     color: black;
 }
 
+#passwordField{
+    width: 93%;
+}
+
+#showPass{
+    margin: 17px 0px;
+    color: white;
+    background-color: darkslategrey;
+    border: none;
+    border-radius: 3px;
+    float: left;
+    margin: none;
+    height: 69%;
+    width: 30%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#showPass:hover{
+    background-color: rgb(31, 53, 53);
+}
+
 #valider{
     background-color: darkslategrey;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
     border: none;
     padding: 10px;
     border-radius: 5px;
