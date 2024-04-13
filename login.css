@@ -3,7 +3,7 @@ body{
 }
 
 #UnivTours{
-    width: 40%;
+    width: 30%;
     height: auto;
     display: block;
     margin: auto;
@@ -38,6 +38,7 @@ h2{
     padding: 10px;
     width: 93%;
     outline: none;
+    height: 25px;
 }
 
 .champs{
@@ -47,6 +48,7 @@ h2{
     padding: 10px;
     width: 70%;
     outline: none;
+    height: 25px;
 }
 
 #passDiv {
@@ -69,6 +71,7 @@ fieldset{
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
     margin: 10px 0px;
+    padding: 1px;
     border-radius: 5px;
     color: rgb(75, 75, 75);
 }
@@ -78,12 +81,12 @@ fieldset:hover{
 }
 
 #passwordField{
-    width: 93%;
+    width: 98%;
 }
 
 #showPass{
     cursor: pointer;
-    margin: 17px 0px;
+    margin: 16px 0px;
     color: white;
     background-color: darkslategrey;
     border: none;
@@ -91,7 +94,7 @@ fieldset:hover{
     float: left;
     margin: none;
     height: 69%;
-    width: 30%;
+    width: 23%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
