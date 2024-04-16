@@ -1,5 +1,6 @@
 body{
     background-color: rgb(233, 231, 231);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #UnivTours{
@@ -32,7 +33,6 @@ h2{
   }
 
 #password{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     border: none;
     padding: 10px;
@@ -42,7 +42,6 @@ h2{
 }
 
 .champs{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     border: none;
     padding: 10px;
@@ -68,7 +67,6 @@ h2{
 }
 
 fieldset{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: small;
     margin: 10px 0px;
     padding: 1px;
@@ -105,7 +103,6 @@ fieldset:hover{
 #valider{
     background-color: darkslategrey;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     border: none;
     padding: 10px;
@@ -119,12 +116,10 @@ fieldset:hover{
 }
 
 #inscrire{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: large;
 }
 
 #divinscrire{
     margin: 15px 0px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: large;
 }
