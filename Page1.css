@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.container {
+    height: 100vh;
+    overflow: auto;
+    background-color: #ffffff;
+}
+
+
+.parent {
+    display: grid;
+    grid-template-columns: 15% 5% 70% 10%;  /* correnspond au pourcentage d'espace pris par chaque clolonnes sur la largeur*/
+    grid-template-rows: auto 1fr auto;
+}
+
+.titre_catégories {
+    margin:0.5vw;
+    font-size: 2.5vw; /* l'unité vw permet à la taille du text de s'adapter à la place qu'il a*/
+}
+
+.liste_catégories {
+    padding-left: 1.7vw;
+}
+
+.element_liste_catégories {
+    padding-bottom:0.5vw ;
+    list-style-type: symbols(A,B,C);
+    font-size: 1.4vw;
+    text-align: left;
+}
+
+
+.haut,  
+.gauche,
+.message,
+.espace-bas,
+.espace-droit,
+.espace-gauche,
+.espace-haut {
+    border-radius: 5px;
+    /*
+    on peux mettre des truc ici pour que ça s'applique à tout
+    */
+}
+
+.haut {
+    background-color: rgb(175, 238, 233);
+    height: 5vh; /* Le total des vh doit faire 100, pour les lignes ça correspond à un pourcetage de la hauteur de la page*/
+    border: 1px rgb(255, 0, 234) solid;
+    grid-row: 1;
+    grid-column: 1 / 5;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+            /* correnspond au pourcentage d'espace pris par chaque clolonnes sur la largeur*/
+    grid-template-rows:5vh;
+}
+
+.haut.logo {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.haut.image_logo {
+        width: 100%;
+            /* L'image occupera toute la largeur de la colonne */
+            height: 100%;
+            /* L'image occupera toute la hauteur de la colonne */
+}
+
+.haut.image_logo img {
+max-width: 100%;
+    /* La largeur maximale de l'image est de 100% de la largeur de son conteneur */
+    max-height: 100%;
+    /* La hauteur maximale de l'image est de 100% de la hauteur de son conteneur */
+    width: auto;
+    /* Permet à l'image de conserver son ratio d'aspect original */
+    height: auto;
+    /* Permet à l'image de conserver son ratio d'aspect original */
+    display: block;
+    /* Assure que l'image se comporte comme un élément de bloc */
+    margin: auto;
+}
+
+.gauche {
+    background-color: rgb(175, 238, 233);
+    height: 85vh;
+    border: 1px rgb(255, 0, 234) solid;
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.message {
+    background-color: rgb(175, 238, 233);;
+    border: 1px rgb(255, 0, 234) solid;
+    height: 85vh;
+    grid-row: 3;
+    grid-column: 3;
+}
+
+.espace-haut {
+    background-color: rgb(255, 255, 255);
+    height: 5vh;
+    grid-row: 2;
+    grid-column: 1/5;
+}
+
+.espace-bas {
+    background-color: rgb(255, 255, 255);
+    height: 4vh; 
+    grid-row: 4; /*bon le total des vh fait 99 j'ai ajusté pour pas avoir de scroll vertical (à cause des bodures je pense) */
+    grid-column: 1/5;
+}
+
+.espace-gauche {
+    background-color: rgb(255, 255, 255);
+    height: 85vh;
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.espace-droit {
+    background-color: rgb(255, 255, 255);
+    height: 90;
+    height: 85vh;
+    grid-row: 3;
+    grid-column: 4;
+}
+
