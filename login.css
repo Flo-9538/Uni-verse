@@ -85,13 +85,12 @@ fieldset:hover{
 
 #showPass{
     cursor: pointer;
-    margin: 16px 0px;
+    margin: 17px 0px;
     color: white;
     background-color: darkslategrey;
     border: none;
     border-radius: 3px;
     float: left;
-    margin: none;
     height: 69%;
     width: 23%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
