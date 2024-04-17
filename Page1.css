@@ -20,7 +20,7 @@ body {
 
 .titre_catégories {
     margin:0.5vw;
-    font-size: 2.5vw; /* l'unité vw permet à la taille du text de s'adapter à la place qu'il a*/
+    font-size: 2.5vw; /* l'unité vw permet à la taille du texte de s'adapter à la place qu'il a*/
 }
 
 .liste_catégories {
