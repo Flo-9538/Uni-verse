@@ -12,7 +12,6 @@ body {
     overflow: auto;
 }
 
-
 .parent {
     display: grid;
     grid-template-columns: 15% 5% 70% 10%;  /* correnspond au pourcentage d'espace pris par chaque clolonnes sur la largeur*/
@@ -35,7 +34,6 @@ body {
     text-align: left;
 }
 
-
 .haut,  
 .gauche,
 .message{
@@ -50,11 +48,36 @@ body {
 .haut {
     height: 5vh; /* Le total des vh doit faire 100, pour les lignes ça correspond à un pourcetage de la hauteur de la page*/
     grid-row: 1;
-    grid-column: 1 / 5;
+    grid-column: 1 / 4;
     display: grid;
     grid-template-columns: 50% 50%;
             /* correnspond au pourcentage d'espace pris par chaque clolonnes sur la largeur*/
     grid-template-rows:5vh;
+}
+
+.connection {
+    /* Use a flexbox layout */
+	display: flex;
+	/* Make a horizontal flexbox (the default) */
+	flex-direction: row;
+	/* The important part: vertically center the items */
+	align-items: center;
+    margin: auto;
+    padding: 0px 20px;
+    font-size: 1.2vw;
+    background-color: rgb(56, 99, 99);
+    color: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 5vh;
+    grid-row: 1;
+    grid-column: 4;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.connection:hover{
+    background-color: darkslategrey;
 }
 
 .haut.logo {

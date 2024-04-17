@@ -87,7 +87,7 @@ fieldset:hover{
     cursor: pointer;
     margin: 17px 0px;
     color: white;
-    background-color: darkslategrey;
+    background-color: rgb(56, 99, 99);
     border: none;
     border-radius: 3px;
     float: left;
@@ -97,11 +97,11 @@ fieldset:hover{
 }
 
 #showPass:hover{
-    background-color: rgb(31, 53, 53);
+    background-color: darkslategrey;
 }
 
 #valider{
-    background-color: darkslategrey;
+    background-color: rgb(56, 99, 99);
     color: white;
     font-size: large;
     border: none;
@@ -112,7 +112,7 @@ fieldset:hover{
 }
 
 #valider:hover{
-    background-color: rgb(31, 53, 53);
+    background-color: darkslategrey;
 }
 
 #inscrire{
