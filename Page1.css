@@ -2,13 +2,14 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: rgb(233, 231, 231);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
 }
-
 
 .container {
     height: 100vh;
     overflow: auto;
-    background-color: #ffffff;
 }
 
 
@@ -37,24 +38,19 @@ body {
 
 .haut,  
 .gauche,
-.message,
-.espace-bas,
-.espace-droit,
-.espace-gauche,
-.espace-haut {
-    border-radius: 5px;
+.message{
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     /*
     on peux mettre des truc ici pour que ça s'applique à tout
     */
 }
 
 .haut {
-    background-color: rgb(175, 238, 233);
     height: 5vh; /* Le total des vh doit faire 100, pour les lignes ça correspond à un pourcetage de la hauteur de la page*/
-    border: 1px rgb(255, 0, 234) solid;
     grid-row: 1;
     grid-column: 1 / 5;
-
     display: grid;
     grid-template-columns: 50% 50%;
             /* correnspond au pourcentage d'espace pris par chaque clolonnes sur la largeur*/
@@ -67,14 +63,14 @@ body {
 }
 
 .haut.image_logo {
-        width: 100%;
-            /* L'image occupera toute la largeur de la colonne */
-            height: 100%;
-            /* L'image occupera toute la hauteur de la colonne */
+    width: 100%;
+    /* L'image occupera toute la largeur de la colonne */
+    height: 100%;
+    /* L'image occupera toute la hauteur de la colonne */
 }
 
 .haut.image_logo img {
-max-width: 100%;
+    max-width: 100%;
     /* La largeur maximale de l'image est de 100% de la largeur de son conteneur */
     max-height: 100%;
     /* La hauteur maximale de l'image est de 100% de la hauteur de son conteneur */
@@ -88,45 +84,41 @@ max-width: 100%;
 }
 
 .gauche {
-    background-color: rgb(175, 238, 233);
+    margin-left: 10px;
     height: 85vh;
-    border: 1px rgb(255, 0, 234) solid;
     grid-row: 3;
     grid-column: 1;
 }
 
 .message {
-    background-color: rgb(175, 238, 233);;
-    border: 1px rgb(255, 0, 234) solid;
     height: 85vh;
     grid-row: 3;
     grid-column: 3;
 }
 
 .espace-haut {
-    background-color: rgb(255, 255, 255);
+    display: block;
     height: 5vh;
     grid-row: 2;
     grid-column: 1/5;
 }
 
 .espace-bas {
-    background-color: rgb(255, 255, 255);
+    display: none;
     height: 4vh; 
     grid-row: 4; /*bon le total des vh fait 99 j'ai ajusté pour pas avoir de scroll vertical (à cause des bodures je pense) */
     grid-column: 1/5;
 }
 
 .espace-gauche {
-    background-color: rgb(255, 255, 255);
+    display: none;
     height: 85vh;
     grid-row: 3;
     grid-column: 2;
 }
 
 .espace-droit {
-    background-color: rgb(255, 255, 255);
-    height: 90;
+    display: none;
     height: 85vh;
     grid-row: 3;
     grid-column: 4;
