@@ -80,30 +80,10 @@ body {
     background-color: darkslategrey;
 }
 
-.haut.logo {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.haut.image_logo {
-    width: 100%;
-    /* L'image occupera toute la largeur de la colonne */
+.image_logo{
     height: 100%;
     /* L'image occupera toute la hauteur de la colonne */
-}
-
-.haut.image_logo img {
-    max-width: 100%;
-    /* La largeur maximale de l'image est de 100% de la largeur de son conteneur */
-    max-height: 100%;
-    /* La hauteur maximale de l'image est de 100% de la hauteur de son conteneur */
     width: auto;
-    /* Permet à l'image de conserver son ratio d'aspect original */
-    height: auto;
-    /* Permet à l'image de conserver son ratio d'aspect original */
-    display: block;
-    /* Assure que l'image se comporte comme un élément de bloc */
-    margin: auto;
 }
 
 .gauche {
