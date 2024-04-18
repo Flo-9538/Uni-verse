@@ -87,7 +87,9 @@ fieldset:hover{
     cursor: pointer;
     margin: 17px 0px;
     color: white;
-    background-color: rgb(56, 99, 99);
+    /* https://cssgradient.io */
+    background: rgb(100,105,145);
+    background: linear-gradient(90deg, rgba(100,105,145,1) 0%, rgba(94,46,105,1) 100%);
     border: none;
     border-radius: 3px;
     float: left;
@@ -101,7 +103,8 @@ fieldset:hover{
 }
 
 #valider{
-    background-color: rgb(56, 99, 99);
+    background: rgb(100,105,145);
+    background: linear-gradient(90deg, rgba(100,105,145,1) 0%, rgba(94,46,105,1) 100%);
     color: white;
     font-size: large;
     border: none;
