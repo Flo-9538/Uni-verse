@@ -13,20 +13,20 @@
              title="CAS"
              src="Logo_Uni-verse.png"/></p>
 
-    <form action="login.php" method="post" id="center">
+    <form action="login.php" method="POST" id="center">
         <h1 id="connexion">Connexion</h1>
         <hr>
         <h2>Entrez votre adresse email et votre mot de passe</h2>
         <fieldset>
             <legend>Email étudiant :</legend>
-            <input type="text" id="email" class="champs" placeholder="sarah.croche" pattern="[\w_-]{0,}[.]{1}[\w_-]{0,}" title="'prénom.nom'" required>
+            <input type="text" id="email" name="email" class="champs" placeholder="sarah.croche" pattern="[\w_-]{0,}[.]{1}[\w_-]{0,}" title="'prénom.nom'" required>
             @etu.univ-tours.fr<br>
         </fieldset>
         <div id="passDiv">
             <div id="gauche">
                 <fieldset id="passwordField">
                     <legend>Mot de passe :</legend>
-                    <input type="password" id="password" pattern="[\w_.!,?*@;:-]{8,30}" title="8 caractères min, 30 max et charactère spécial dans _.!,?@*;:-" required>
+                    <input type="password" name="password" id="password" pattern="[\w_.!,?*@;:-]{8,30}" title="8 caractères min, 30 max et charactère spécial dans _.!,?@*;:-" required>
                 </fieldset>
             </div>
 
@@ -38,6 +38,8 @@
         <input type="submit" id="valider" value="Se connecter"><br>
         <div id="divinscrire">Pas encore inscrit ? <a href="register.html" id="inscrire">Créer un compte</a></div>
     </form>
+
+  
 
     <script>
         const togglePassword = document.getElementById("showPass");
@@ -53,6 +55,5 @@
             icon.classList.toggle("fa-eye-slash");
         });
     </script>
-
 </body>
 </html>

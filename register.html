@@ -13,16 +13,16 @@
              title="CAS"
              src="Logo_Uni-verse.png" /></p>
 
-    <form action="register.php" method="post" id="center">
+    <form action="register.php" method="POST" id="center">
         <h1 id="connexion">Créer un compte</h1>
         <fieldset>
             <legend>Nom d'utilisateur</legend>
-            <input type="text" id="username" class="champs" pattern="[\w_.-]{2,30}" title="2 caractères min, 20 max et signe dans _.-" required>
+            <input type="text" id="username" name="username" class="champs" pattern="[\w_.-]{2,30}" title="2 caractères min, 20 max et signe dans _.-" required>
         </fieldset>
 
         <fieldset>
             <legend>Email étudiant :</legend>
-            <input type="text" id="email" class="champs" placeholder="sarah.croche" pattern="[\w_-]{0,}[.]{1}[\w_-]{0,}" title="'prénom.nom'" required>
+            <input type="text" id="email" name="email" class="champs" placeholder="sarah.croche" pattern="[\w_-]{0,}[.]{1}[\w_-]{0,}" title="'prénom.nom'" required>
             @etu.univ-tours.fr<br>
         </fieldset>
         
@@ -30,7 +30,7 @@
             <div id="gauche">
                 <fieldset id="passwordField">
                     <legend>Mot de passe :</legend>
-                    <input type="password" id="password" pattern="[\w_.!,?*@;:-]{8,30}" title="8 caractères min, 30 max et charactère spécial dans _.!,?@*;:-" required>
+                    <input type="password" name="password" id="password" pattern="[\w_.!,?*@;:-]{8,30}" title="8 caractères min, 30 max et charactère spécial dans _.!,?@*;:-" required>
                 </fieldset>
             </div>
 
@@ -38,7 +38,7 @@
                 <button style="font-size:24px" type="button" id="showPass"><i class="fa fa-eye" id="icon" style="font-size:36px"></i></button>
             </div>
         </div>
-        <input type="submit" id="valider" value="S'inscrire"><br>
+        <input type="submit" id="valider" value="S'inscrire" name="ok"><br>
         <div id="divinscrire">déja inscrit ? <a href="login.html" id="inscrire">Connexion</a></div>
     </form>
     
