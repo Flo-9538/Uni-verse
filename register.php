@@ -19,36 +19,41 @@ if(isset($_POST['ok'])){
     $rep = $req->fetch();
     $req = $bdd->query("SELECT * FROM users WHERE email = '$email'");
     $rep1 = $req->fetch();
-    if ($rep){
-        if (($rep['id'] != false)){
-            // adresse mail deja utilisée
+    
+    if (($rep['id'] != false)){
+        // username deja utilisée
+        $error_msg = "Nom d'utilisateur deja utilisé";
+    }
+    else if (($rep1['id'] != false)){
+        // adresse mail deja utilisé
+        $error_msg = "Email deja utilisé";
+    }
+    else{
+        // tout est ok
+        $requete = $bdd->prepare("INSERT INTO users VALUES(0, :username, :email, :password)");
+        // requete sql pour la bdd
+        $requete->execute(
+            array(
+                "username" => $username,
+                "email" => $email,
+                "password" => $password,
+            )
+        );
+        $req = $bdd->query("SELECT 'id' FROM users WHERE email = '$email' AND password = '$password'");
+        $id = $req->fetch();
 
-        }
-        else if (($rep1['id'] != false)){
-            // username deja utilisé
+        $_SESSION['email'] = $email;
+        $_SESSION['username'] = $username;
+        $_SESSION['password'] = $password;
+        $_SESSION['id'] = $id;
+        $_SESSION['connecte'] = 1;
+        header("Location: Page1.php");
+    }
 
-        }
-        else{
-            // tout est ok
-            $requete = $bdd->prepare("INSERT INTO users VALUES(0, :username, :email, :password)");
-            // requete sql pour la bdd
-            $requete->execute(
-                array(
-                    "username" => $username,
-                    "email" => $email,
-                    "password" => $password,
-                )
-            );
-            $req = $bdd->query("SELECT 'id' FROM users WHERE email = '$email' AND password = '$password'");
-            $id = $req->fetch();
-
-            $_SESSION['email'] = $email;
-            $_SESSION['username'] = $username;
-            $_SESSION['password'] = $password;
-            $_SESSION['id'] = $id;
-            $_SESSION['connecte'] = 1;
-            //header("Location: Page1.php");
-        }
+    if($error_msg){
+        ?>
+        <p><?php echo $error_msg;?></p>
+        <?php
     }
 }
 ?>

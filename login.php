@@ -28,11 +28,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                 header("Location: Page1.php");
             }
+            else{
+                $error_msg = "Email ou mdp incorrect !";
+            }
         }
+        $error_msg = "Email ou mdp incorrect !";
     }
     if($error_msg){
         ?>
-        <p><?php echo "Email ou mdp incorrect !";?></p>
+        <p><?php echo $error_msg;?></p>
         <?php
     }
 }

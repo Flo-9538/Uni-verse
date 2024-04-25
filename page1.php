@@ -8,7 +8,16 @@
   </head>
   <body>
     <?php
+    $servername = "localhost";
+    $user = "root";
+    $pass = "root";
+
+    $bdd = new PDO("mysql:host=$servername;dbname=universe", $user); 
+    // création de l'instance bdd (connexion à la bdd)
+
     session_start();
+    $req = $bdd->query("SELECT `user`,`message` FROM `messages`");
+    $messages = $req->fetch();
     ?>
 
     <div class="container">
@@ -19,14 +28,15 @@
           </div>
         </div>
         <div class="message">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id
-          ex nisl. pus nisl lectus. Donec in nulla nisl. Nunc a fringilla
-          lectus.
-          dkzedoiedjdiuzeeduzufhuzqedyuebfuqebqfubequcuehfherbvhuebruvheyurhvuoyerfuebfueoueuoeebfhfifhfuhuovhqeu
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias dicta,
-          ab aliquid rem quasi incidunt quis. Quod praesentium odio molestias
-          t'as les cramptés? corporis magnam voluptates cumque illum a, possimus
-          saepe soluta voluptatem?
+        <?php 
+        echo json_encode($messages);
+        ?>
+        <hr>
+        <?php
+        for ($i = 0; $i <= count($messages)-3; $i++) {
+          echo "$messages[$i] <br>";
+        }
+        ?>
         </div>
         <div class="gauche">
           <h2 class="titre_catégories">Catégories:</h2>
@@ -55,7 +65,7 @@
           }
         ?>
         <div class="espace-bas">espace bas</div>
-        <div class="espace-haut">espace haut</div>
+        <div class="espace-haut"></div>
         <div class="espace-gauche">espace gauche</div>
         <div class="espace-droit">espace droit</div>
       </div>
