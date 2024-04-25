@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $servername = "localhost";
 $user = "root";
 $pass = "root";
@@ -21,6 +23,13 @@ if(isset($_POST['ok'])){
             "password" => $password,
         )
     );
-    header("Location: Page1.html");
+    $req = $bdd->query("SELECT 'id' FROM users WHERE email = '$email' AND password = '$password'");
+    $id = $req->fetch();
+
+    $_SESSION['email'] = $email;
+    $_SESSION['username'] = $username;
+    $_SESSION['password'] = $password;
+    $_SESSION['id'] = $id
+    header("Location: Page1.php");
 }
 ?>
