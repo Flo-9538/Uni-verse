@@ -22,8 +22,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
             $_SESSION['id'] = $req->fetch()['id'];
+            $_SESSION['username'] = $req->fetch()['username'];
 
-            header("Location: Page1.html");
+            header("Location: Page1.php");
         }
         else{
             $error_msg = "Email ou mdp incorrect !";
