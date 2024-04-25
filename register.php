@@ -14,23 +14,41 @@ if(isset($_POST['ok'])){
     $password = sha1($_POST['password']);
     // récupération des champs du form 
 
-    $requete = $bdd->prepare("INSERT INTO users VALUES(0, :username, :email, :password)");
-    // requete sql pour la bdd
-    $requete->execute(
-        array(
-            "username" => $username,
-            "email" => $email,
-            "password" => $password,
-        )
-    );
-    $req = $bdd->query("SELECT 'id' FROM users WHERE email = '$email' AND password = '$password'");
-    $id = $req->fetch();
+    // recupération des emails et usernames existants sur la bdd
+    $req = $bdd->query("SELECT * FROM users WHERE username = '$username'");
+    $rep = $req->fetch();
+    $req = $bdd->query("SELECT * FROM users WHERE email = '$email'");
+    $rep1 = $req->fetch();
+    if ($rep){
+        if (($rep['id'] != false)){
+            // adresse mail deja utilisée
 
-    $_SESSION['email'] = $email;
-    $_SESSION['username'] = $username;
-    $_SESSION['password'] = $password;
-    $_SESSION['id'] = $id;
-    $_SESSION['connecte'] = 1;
-    header("Location: Page1.php");
+        }
+        else if (($rep1['id'] != false)){
+            // username deja utilisé
+
+        }
+        else{
+            // tout est ok
+            $requete = $bdd->prepare("INSERT INTO users VALUES(0, :username, :email, :password)");
+            // requete sql pour la bdd
+            $requete->execute(
+                array(
+                    "username" => $username,
+                    "email" => $email,
+                    "password" => $password,
+                )
+            );
+            $req = $bdd->query("SELECT 'id' FROM users WHERE email = '$email' AND password = '$password'");
+            $id = $req->fetch();
+
+            $_SESSION['email'] = $email;
+            $_SESSION['username'] = $username;
+            $_SESSION['password'] = $password;
+            $_SESSION['id'] = $id;
+            $_SESSION['connecte'] = 1;
+            //header("Location: Page1.php");
+        }
+    }
 }
 ?>

@@ -17,23 +17,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $req = $bdd->query("SELECT * FROM users WHERE email = '$email' AND password = '$password'");
         // requete sql pour la bdd
         $rep = $req->fetch();
-        if($rep['id'] != false){
-            // c'est ok
-            $_SESSION['email'] = $email;
-            $_SESSION['password'] = $password;
-            $_SESSION['id'] = $rep['id'];
-            $_SESSION['username'] = $rep['username'];
-            $_SESSION['connecte'] = 1;
+        if ($rep){
+            if($rep['id'] != false){
+                // c'est ok
+                $_SESSION['email'] = $email;
+                $_SESSION['password'] = $password;
+                $_SESSION['id'] = $rep['id'];
+                $_SESSION['username'] = $rep['username'];
+                $_SESSION['connecte'] = 1;
 
-            header("Location: Page1.php");
-        }
-        else{
-            $error_msg = "Email ou mdp incorrect !";
+                header("Location: Page1.php");
+            }
         }
     }
     if($error_msg){
         ?>
-        <p><?php echo $error_msg;?></p>
+        <p><?php echo "Email ou mdp incorrect !";?></p>
         <?php
     }
 }
