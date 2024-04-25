@@ -36,7 +36,7 @@ session_start();
         </fieldset>
     </div> 
     <form action="disconnect.php">
-        <input type="submit" value="Se déconnecter">
+        <input type="submit" id="deconnection" value="Se déconnecter">
     </form>
 </body>
 </html>
