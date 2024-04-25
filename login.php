@@ -1,12 +1,7 @@
 <?php
 session_start();
 
-$servername = "localhost";
-$user = "root";
-$pass = "root";
-
-$bdd = new PDO("mysql:host=$servername;dbname=universe", $user); 
-// création de l'instance bdd (connexion à la bdd)
+include 'bdd.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $email = $_POST['email'];

@@ -8,12 +8,7 @@
   </head>
   <body>
     <?php
-    $servername = "localhost";
-    $user = "root";
-    $pass = "root";
-
-    $bdd = new PDO("mysql:host=$servername;dbname=universe", $user); 
-    // création de l'instance bdd (connexion à la bdd)
+    include 'bdd.php';
 
     session_start();
     $req = $bdd->query("SELECT `user`,`message` FROM `messages`");
