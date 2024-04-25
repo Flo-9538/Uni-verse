@@ -21,8 +21,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // c'est ok
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
-            $_SESSION['id'] = $req->fetch()['id'];
-            $_SESSION['username'] = $req->fetch()['username'];
+            $_SESSION['id'] = $rep['id'];
+            $_SESSION['username'] = $rep['username'];
             $_SESSION['connecte'] = 1;
 
             header("Location: Page1.php");

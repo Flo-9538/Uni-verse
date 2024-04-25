@@ -35,5 +35,8 @@ session_start();
             <?php echo $_SESSION['email'];?>
         </fieldset>
     </div> 
+    <form action="disconnect.php">
+        <input type="submit" value="Se déconnecter">
+    </form>
 </body>
 </html>
