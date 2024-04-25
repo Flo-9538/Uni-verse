@@ -13,7 +13,6 @@
     session_start();
     $req = $bdd->query("SELECT `user`,`message` FROM `messages`");
     // c une query
-    // c une query
     ?>
 
     <div class="container">
