@@ -12,7 +12,6 @@
 
     session_start();
     $req = $bdd->query("SELECT `user`,`message` FROM `messages`");
-    $messages = $req->fetch();
     ?>
 
     <div class="container">
@@ -23,14 +22,16 @@
           </div>
         </div>
         <div class="message">
-        <?php 
-        echo json_encode($messages);
-        ?>
-        <hr>
         <?php
-        for ($i = 0; $i <= count($messages)-3; $i++) {
-          echo "$messages[$i] <br>";
+
+        while ($messages = $req->fetch()) {
+          echo "$messages[0] : <br>";
+          echo "$messages[1] <br>";
+          ?>
+          <hr>
+          <?php
         }
+
         ?>
         </div>
         <div class="gauche">
