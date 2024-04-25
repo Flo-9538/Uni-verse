@@ -29,7 +29,8 @@ if(isset($_POST['ok'])){
     $_SESSION['email'] = $email;
     $_SESSION['username'] = $username;
     $_SESSION['password'] = $password;
-    $_SESSION['id'] = $id
+    $_SESSION['id'] = $id;
+    $_SESSION['connecte'] = 1;
     header("Location: Page1.php");
 }
 ?>

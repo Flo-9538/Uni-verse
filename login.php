@@ -23,6 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $_SESSION['password'] = $password;
             $_SESSION['id'] = $req->fetch()['id'];
             $_SESSION['username'] = $req->fetch()['username'];
+            $_SESSION['connecte'] = 1;
 
             header("Location: Page1.php");
         }

@@ -10,10 +10,6 @@
     <?php
     session_start();
     ?>
-        <p><?php echo $_SESSION['username'];?></p>
-        <?php
-
-    ?>
 
     <div class="container">
       <div class="parent">
@@ -46,7 +42,18 @@
             </li>
           </ul>
         </div>
-        <a href="login.html" class="connection">Se connecter</a>
+        <?php
+          if (isset($_SESSION['connecte'])){
+            ?>
+            <a href="profile.php" class="connection"><?php echo $_SESSION['username'];?></a>
+            <?php
+          }
+          else{
+            ?>
+            <a href="login.html" class="connection">Se connecter</a>
+            <?php
+          }
+        ?>
         <div class="espace-bas">espace bas</div>
         <div class="espace-haut">espace haut</div>
         <div class="espace-gauche">espace gauche</div>
