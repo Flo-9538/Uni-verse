@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $servername = "localhost";
 $user = "root";
@@ -9,7 +10,7 @@ $bdd = new PDO("mysql:host=$servername;dbname=universe", $user);
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = sha1($_POST['password']);
     // récupération des champs du form 
 
     if($email != "" && $password != ""){
@@ -18,6 +19,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $rep = $req->fetch();
         if($rep['id'] != false){
             // c'est ok
+            $_SESSION['email'] = $email;
+            $_SESSION['password'] = $password;
+            $_SESSION['id'] = $req->fetch()['id'];
+
             header("Location: Page1.html");
         }
         else{
