@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 25 avr. 2024 à 18:56
+-- Généré le : jeu. 25 avr. 2024 à 22:17
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -38,9 +38,30 @@ CREATE TABLE `messages` (
 --
 
 INSERT INTO `messages` (`id`, `user`, `message`) VALUES
-(1, 'raphatex', 'lorem ipsum hdzq qzdhzuiq hdizq zd qzjdjqzqzd qzd qzpdozqpdo qzd qzd zqd zq dzq opkhph rpoib xcbnxcv xgjyghciushc ijfoiesjdiozqjdoij zdi doqdjozqjd ozjqdoizq djzquidzqpjd qozidiozqj dzdpo zqopd zodzq'),
 (2, 'flo', 'les ordinateurs kantiks >>>>>>> arduino >>>> les maths'),
 (4, 'pipi', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
+(1, 'raphatex', 'raphael.texier', 'Wendylabest45'),
+(2, 'wendy', 'wendy.juju', 'Raphouleplusbo123'),
+(4, 'test', 'test', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
 
 --
 -- Index pour les tables déchargées
@@ -53,6 +74,12 @@ ALTER TABLE `messages`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
@@ -61,6 +88,12 @@ ALTER TABLE `messages`
 --
 ALTER TABLE `messages`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT pour la table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
