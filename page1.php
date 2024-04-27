@@ -21,18 +21,27 @@
             <img class="image_logo" src="Logo_Uni-verse.png" alt="Uni'Verse" />
           </div>
         </div>
-        <div class="message">
-        <?php
-
-        while ($messages = $req->fetch()) {
-          echo "$messages[0] : <br>";
-          echo "$messages[1] <br>";
-          ?>
-          <hr>
+        <div method="POST" class="messages">
+          <form id="ecrire">
+          <fieldset id="passwordField">
+              <legend>Ecrire un nouveau message :</legend>
+              <input type="text" name="message" id="ecrire_message" title="ecrivez votre message" required>
+          </fieldset>
+          <input type="submit" id="envoyer">
+          </form>
+          <div id="message">
           <?php
-        }
 
-        ?>
+          while ($messages = $req->fetch()) {
+            echo "$messages[0] : <br>";
+            echo "$messages[1] <br>";
+            ?>
+            <hr>
+            <?php
+          }
+
+          ?>
+          </div>
         </div>
         <div class="gauche">
           <h2 class="titre_catégories">Catégories:</h2>

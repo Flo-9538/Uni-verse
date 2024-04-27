@@ -106,7 +106,7 @@ fieldset:hover{
 }
 
 #showPass:hover{
-    background-color: darkslategrey;
+    background: rgb(102, 27, 98);
 }
 
 #valider{
@@ -121,7 +121,7 @@ fieldset:hover{
 }
 
 #valider:hover{
-    background-color: darkslategrey;
+    background: rgb(102, 27, 98);
 }
 
 #inscrire{

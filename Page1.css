@@ -34,15 +34,66 @@ body {
     text-align: left;
 }
 
+#ecrire, #message{
+    background-color: rgb(243, 241, 241);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+#message{
+    margin-top: 15px;
+}
+
+fieldset{
+    font-size: 1.1vw;
+    margin: 10px 0px;
+    padding: 1px;
+    border-radius: 5px;
+    color: rgb(75, 75, 75);
+}
+
+fieldset:hover{
+    color: black;
+}
+
+#ecrire_message{
+    font-size: large;
+    border: none;
+    padding: 10px;
+    width: 98%;
+    outline: none;
+    height: 25px;
+    background-color: rgb(243, 241, 241);
+}
+
+#envoyer{
+    background: rgb(129, 22, 124);
+    color: white;
+    font-size: large;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+#envoyer:hover{
+    background: rgb(102, 27, 98);
+}
+
 .haut,  
 .gauche,
-.message{
+.messages{
     border-radius: 25px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     /*
     on peux mettre des truc ici pour que ça s'applique à tout
     */
+}
+
+.messages{
+    padding: 15px;
 }
 
 .haut {
@@ -93,7 +144,7 @@ body {
     grid-column: 1;
 }
 
-.message {
+.messages {
     height: 85vh;
     grid-row: 3;
     grid-column: 3;
