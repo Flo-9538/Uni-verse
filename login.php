@@ -24,15 +24,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 header("Location: Page1.php");
             }
             else{
-                $error_msg = "Email ou mdp incorrect !";
+                $error_msg = "Email ou mot de passe incorrect !";
             }
         }
-        $error_msg = "Email ou mdp incorrect !";
-    }
-    if($error_msg){
-        ?>
-        <p><?php echo $error_msg;?></p>
-        <?php
+        $error_msg = "Email ou mot de passe incorrect !";
     }
 }
 ?>
@@ -57,6 +52,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <h1 id="connexion">Connexion</h1>
         <hr>
         <h2>Entrez votre adresse email et votre mot de passe</h2>
+        
+        <?php
+        if(isset($error_msg)){
+            if($error_msg){
+                ?>
+                <p id="error"><?php echo $error_msg;?></p>
+                <?php
+            }
+        }
+        ?>
+
         <fieldset>
             <legend>Email étudiant :</legend>
             <input type="text" id="email" name="email" class="champs" placeholder="sarah.croche" pattern="[\w_-]{0,}[.]{1}[\w_-]{0,}" title="'prénom.nom'" required>

@@ -14,16 +14,25 @@ if(isset($_POST['ok'])){
     $rep = $req->fetch();
     $req = $bdd->query("SELECT * FROM users WHERE email = '$email'");
     $rep1 = $req->fetch();
+    $bool1 = 1;
     
-    if (($rep['id'] != false)){
-        // username deja utilisée
-        $error_msg = "Nom d'utilisateur deja utilisé";
+    if(isset($rep['id'])){
+        if (($rep['id'] != false)){
+            // username deja utilisée
+            $error_msg = "Nom d'utilisateur deja utilisé";
+            $bool1 = 0;
+        }
     }
-    else if (($rep1['id'] != false)){
-        // adresse mail deja utilisé
-        $error_msg = "Email deja utilisé";
+
+    if(isset($rep1['id'])){
+        if (($rep1['id'] != false)){
+            // adresse mail deja utilisé
+            $error_msg = "Email deja utilisé";
+            $bool1 = 0;
+        }
     }
-    else{
+
+    if($bool1){
         // tout est ok
         $requete = $bdd->prepare("INSERT INTO users VALUES(0, :username, :email, :password)");
         // requete sql pour la bdd
@@ -44,12 +53,6 @@ if(isset($_POST['ok'])){
         $_SESSION['connecte'] = 1;
         header("Location: Page1.php");
     }
-
-    if($error_msg){
-        ?>
-        <p><?php echo $error_msg;?></p>
-        <?php
-    }
 }
 ?>
 
@@ -69,6 +72,17 @@ if(isset($_POST['ok'])){
 
     <form action="" method="POST" id="center">
         <h1 id="connexion">Créer un compte</h1>
+
+        <?php
+        if(isset($error_msg)){
+            if($error_msg){
+                ?>
+                <p id="error"><?php echo $error_msg;?></p>
+                <?php
+            }
+        }
+        ?>
+
         <fieldset>
             <legend>Nom d'utilisateur</legend>
             <input type="text" id="username" name="username" class="champs" pattern="[\w_.-]{2,30}" title="2 caractères min, 20 max et signe dans _.-" required>
