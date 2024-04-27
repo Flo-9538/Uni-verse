@@ -52,3 +52,64 @@ if(isset($_POST['ok'])){
     }
 }
 ?>
+
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="all" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Créer un compte</title>
+</head>
+<body>
+    <a href="page1.php"><img id="UnivTours"
+        title="CAS"
+        src="Logo_Uni-verse.png"/></a>
+
+    <form action="" method="POST" id="center">
+        <h1 id="connexion">Créer un compte</h1>
+        <fieldset>
+            <legend>Nom d'utilisateur</legend>
+            <input type="text" id="username" name="username" class="champs" pattern="[\w_.-]{2,30}" title="2 caractères min, 20 max et signe dans _.-" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Email étudiant :</legend>
+            <input type="text" id="email" name="email" class="champs" placeholder="sarah.croche" pattern="[\w_-]{0,}[.]{1}[\w_-]{0,}" title="'prénom.nom'" required>
+            @etu.univ-tours.fr<br>
+        </fieldset>
+        
+        <div id="passDiv">
+            <div id="gauche">
+                <fieldset id="passwordField">
+                    <legend>Mot de passe :</legend>
+                    <input type="password" name="password" id="password" pattern="[\w_.!,?*@;:-]{8,30}" title="8 caractères min, 30 max et charactère spécial dans _.!,?@*;:-" required>
+                </fieldset>
+            </div>
+
+            <div id="droite">
+                <button style="font-size:24px" type="button" id="showPass"><i class="fa fa-eye" id="icon" style="font-size:36px"></i></button>
+            </div>
+        </div>
+        <input type="submit" id="valider" value="S'inscrire" name="ok"><br>
+        <div id="divinscrire">déja inscrit ? <a href="login.php" id="inscrire">Connexion</a></div>
+    </form>
+    
+    <script>
+        const togglePassword = document.getElementById("showPass");
+        const password = document.getElementById("password");
+        const icon = document.getElementById("icon");
+
+        togglePassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            
+            // toggle the icon
+            icon.classList.toggle("fa-eye-slash");
+        });
+    </script>
+
+</body>
+</html>

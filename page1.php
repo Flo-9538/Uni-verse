@@ -12,7 +12,6 @@
 
     session_start();
     $req = $bdd->query("SELECT `user`,`message` FROM `messages`");
-    // c une query
     ?>
 
     <div class="container">
@@ -57,7 +56,7 @@
           }
           else{
             ?>
-            <a href="login.html" class="connection">Se connecter</a>
+            <a href="login.php" class="connection">Se connecter</a>
             <?php
           }
         ?>
