@@ -44,15 +44,15 @@ body {
     margin-top: 15px;
 }
 
-fieldset{
+#passwordField{
     font-size: 1.1vw;
     margin: 10px 0px;
     padding: 1px;
-    border-radius: 5px;
+    border-radius: 10px;
     color: rgb(75, 75, 75);
 }
 
-fieldset:hover{
+#passwordField:hover{
     color: black;
 }
 
@@ -79,6 +79,17 @@ fieldset:hover{
 
 #envoyer:hover{
     background: rgb(102, 27, 98);
+}
+
+.users_messages{
+    font-size: 1.1vw;
+    margin: 10px 0px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+}
+
+p{
+    margin: 3px 0px;
 }
 
 .haut,  

@@ -41,24 +41,38 @@ if(isset($_POST['ok'])){
         </div>
         <div class="messages">
           <form method="POST" id="ecrire">
-          <fieldset id="passwordField">
-            <legend>Ecrire un nouveau message :</legend>
-            <input type="text" name="message" id="ecrire_message" title="ecrivez votre message" required>
-          </fieldset>
-          <input type="submit" id="envoyer" name="ok">
+            <fieldset id="passwordField">
+              <legend>Ecrire un nouveau message :</legend>
+              <input type="text" name="message" id="ecrire_message" title="ecrivez votre message" required>
+            </fieldset>
+            <input type="submit" id="envoyer" name="ok">
           </form>
           <div id="message">
-          <?php
-
-          while ($messages = $get_messages->fetch()) {
-            echo "$messages[0] : <br>";
-            echo "$messages[1] <br>";
-            ?>
-            <hr>
+            
             <?php
-          }
+            $i = 0;
+            while ($messages = $get_messages->fetch()) {
+              $list_message[$i] = $messages;
+              $i += 1;
+            }
 
-          ?>
+            for ($i = count($list_message)-1; $i >= 0; $i --) {
+              $user = $list_message[$i][0];
+              $mess = $list_message[$i][1];
+
+              ?>
+              <fieldset class="users_messages">
+              <?php
+              echo "<legend> $user :</legend>";
+              echo "<p> $mess</p>";
+              ?>
+              </fieldset>
+              <?php
+
+            }
+            
+            ?>
+            
           </div>
         </div>
         <div class="gauche">
