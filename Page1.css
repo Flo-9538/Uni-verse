@@ -116,7 +116,7 @@ fieldset:hover{
     margin: auto;
     padding: 0px 20px;
     font-size: 1.2vw;
-    background-color: rgb(56, 99, 99);
+    background: rgb(129, 22, 124);
     color: white;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -128,7 +128,7 @@ fieldset:hover{
 }
 
 .connection:hover{
-    background-color: darkslategrey;
+    background: rgb(102, 27, 98);
 }
 
 .image_logo{
