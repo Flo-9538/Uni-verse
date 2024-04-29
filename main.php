@@ -4,22 +4,22 @@ if(isset($_POST['ok'])){
     $message = $_POST['message'];
     // récupération des champs du form 
 
-    $requete = $bdd->prepare("INSERT INTO messages VALUES(0, :user, :message)");
+    $requete = $bdd->prepare("INSERT INTO messages VALUES(0, :user, :message, :category, :date)");
     // requete sql pour la bdd
     $requete->execute(
         array(
             "user" => $_SESSION['username'],
-            "message" => $message
+            "message" => $message,
+            "category" => $page,
+            "date" => date("Y-m-d")." ".date("H:i:s")
         )
     );
-
     header("Location: ".$page.".php");
-    
 }
 ?>
 
 <!DOCTYPE html>
-<link href="general.css" rel="stylesheet" media="all" />
+<link href="main.css" rel="stylesheet" media="all" />
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -55,7 +55,11 @@ if(isset($_POST['ok'])){
               ?>
               <fieldset class="users_messages">
               <?php
-              echo "<legend> $messages[0] :</legend>";
+              echo "<legend> $messages[0] $messages[2] :</legend>";
+              ?>
+              <p class="date">
+              <?php
+              echo "$messages[2]</p>";
               echo "<p> $messages[1]</p>";
               ?>
               </fieldset>
@@ -91,10 +95,10 @@ if(isset($_POST['ok'])){
             <?php
           }
         ?>
-        <div class="espace-bas">espace bas</div>
+        <div class="espace-bas"></div>
         <div class="espace-haut"></div>
-        <div class="espace-gauche">espace gauche</div>
-        <div class="espace-droit">espace droit</div>
+        <div class="espace-gauche"></div>
+        <div class="espace-droit"></div>
       </div>
     </div>
     <script>

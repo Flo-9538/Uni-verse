@@ -40,6 +40,10 @@ body {
     padding: 15px;
 }
 
+.date{
+    font-size: 0.7vw;
+}
+
 #message{
     background-color: white;
     border-radius: 20px;
@@ -63,13 +67,15 @@ body {
 }
 
 #ecrire_message{
-    font-size: large;
+    font-size: 1.1vw;
+    font-family: Arial, Helvetica, sans-serif;
     border: none;
     padding: 10px;
     width: 98%;
     outline: none;
     height: 25px;
     background-color: rgb(243, 241, 241);
+    resize: none;
 }
 
 #envoyer{

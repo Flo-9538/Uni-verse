@@ -3,7 +3,7 @@ session_start();
 
 include 'bdd.php';
 
-$get_messages = $bdd->query("SELECT `user`,`message` FROM `messages` ORDER BY `id` DESC");
+$get_messages = $bdd->query("SELECT `user`,`message`,`date` FROM `messages` WHERE `category`='physique' ORDER BY `id` DESC");
 $page = "physique";
 
 include 'main.php';
