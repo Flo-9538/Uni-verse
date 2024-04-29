@@ -1,10 +1,4 @@
 <?php
-session_start();
-
-include 'bdd.php';
-
-$get_messages = $bdd->query("SELECT `user`,`message` FROM `messages` ORDER BY `id` DESC");
-
 if(isset($_POST['ok'])){
   // on va envoyer un message
     $message = $_POST['message'];
@@ -19,13 +13,13 @@ if(isset($_POST['ok'])){
         )
     );
 
-    header("Location: Page1.php");
+    header("Location: ".$page.".php");
     
 }
 ?>
 
 <!DOCTYPE html>
-<link href="Page1.css" rel="stylesheet" media="all" />
+<link href="general.css" rel="stylesheet" media="all" />
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -75,13 +69,13 @@ if(isset($_POST['ok'])){
           <h2 class="titre_catégories">Catégories:</h2>
           <ul class="liste_catégories" style="font-size: 25px">
             <li class="element_liste_catégories">
-              <a href="Page2.html">Maths</a>
+              <a href="general.php">general</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="Page3.html">Physique</a>
+              <a href="maths.php">Maths</a>
             </li>
             <li class="element_liste_catégories">
-              bonjour je suis cramptéseeeeee
+              <a href="physique.php">Physique</a>
             </li>
           </ul>
         </div>

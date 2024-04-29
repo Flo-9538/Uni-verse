@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(233, 231, 231);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+.container {
+    height: 100vh;
+    overflow: auto;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 15% 5% 70% 10%;  /* correnspond au pourcentage d'espace pris par chaque clolonnes sur la largeur*/
+    grid-template-rows: auto 1fr auto;
+}
+
+.titre_catégories {
+    margin:0.5vw;
+    font-size: 2.5vw; /* l'unité vw permet à la taille du texte de s'adapter à la place qu'il a*/
+}
+
+.liste_catégories {
+    padding-left: 1.7vw;
+}
+
+.element_liste_catégories {
+    padding-bottom:0.5vw ;
+    list-style-type: symbols(A,B,C);
+    font-size: 1.4vw;
+    text-align: left;
+}
+
+#ecrire{
+    background-color: rgb(243, 241, 241);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+#message{
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+#message{
+    margin-top: 15px;
+}
+
+#messageField{
+    font-size: 1.1vw;
+    margin: 10px 0px;
+    padding: 1px;
+    border-radius: 10px;
+    color: black;
+}
+
+#messageField:hover{
+    color: rgb(75, 75, 75);
+}
+
+#ecrire_message{
+    font-size: large;
+    border: none;
+    padding: 10px;
+    width: 98%;
+    outline: none;
+    height: 25px;
+    background-color: rgb(243, 241, 241);
+}
+
+#envoyer{
+    background: rgb(129, 22, 124);
+    color: white;
+    font-size: large;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+#envoyer:hover{
+    background: rgb(102, 27, 98);
+}
+
+.users_messages{
+    font-size: 1.1vw;
+    margin: 10px 0px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    width: fit-content;
+}
+
+p{
+    margin: 3px 0px;
+}
+
+.haut,  
+.gauche,
+.messages{
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /*
+    on peux mettre des truc ici pour que ça s'applique à tout
+    */
+}
+
+.messages{
+    padding: 15px;
+}
+
+.haut {
+    height: 5vh; /* Le total des vh doit faire 100, pour les lignes ça correspond à un pourcetage de la hauteur de la page*/
+    grid-row: 1;
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: 50% 50%;
+            /* correnspond au pourcentage d'espace pris par chaque clolonnes sur la largeur*/
+    grid-template-rows:5vh;
+}
+
+.connection {
+    /* Use a flexbox layout */
+	display: flex;
+	/* Make a horizontal flexbox (the default) */
+	flex-direction: row;
+	/* The important part: vertically center the items */
+	align-items: center;
+    margin: auto;
+    padding: 0px 20px;
+    font-size: 1.2vw;
+    background: rgb(129, 22, 124);
+    color: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 5vh;
+    grid-row: 1;
+    grid-column: 4;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.connection:hover{
+    background: rgb(102, 27, 98);
+}
+
+.image_logo{
+    height: 100%;
+    /* L'image occupera toute la hauteur de la colonne */
+    width: auto;
+}
+
+.gauche {
+    margin-left: 10px;
+    height: 85vh;
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.messages {
+    height: 85vh;
+    grid-row: 3;
+    grid-column: 3;
+}
+
+.espace-haut {
+    display: block;
+    height: 5vh;
+    grid-row: 2;
+    grid-column: 1/5;
+}
+
+.espace-bas {
+    display: none;
+    height: 4vh; 
+    grid-row: 4; /*bon le total des vh fait 99 j'ai ajusté pour pas avoir de scroll vertical (à cause des bodures je pense) */
+    grid-column: 1/5;
+}
+
+.espace-gauche {
+    display: none;
+    height: 85vh;
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.espace-droit {
+    display: none;
+    height: 85vh;
+    grid-row: 3;
+    grid-column: 4;
+}
+
