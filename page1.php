@@ -3,9 +3,10 @@ session_start();
 
 include 'bdd.php';
 
-$get_messages = $bdd->query("SELECT `user`,`message` FROM `messages`");
+$get_messages = $bdd->query("SELECT `user`,`message` FROM `messages` ORDER BY `id` DESC");
 
 if(isset($_POST['ok'])){
+  // on va envoyer un message
     $message = $_POST['message'];
     // récupération des champs du form 
 
@@ -50,27 +51,16 @@ if(isset($_POST['ok'])){
           <div id="message">
             
             <?php
-            $i = 0;
             while ($messages = $get_messages->fetch()) {
-              $list_message[$i] = $messages;
-              $i += 1;
-            }
-
-            for ($i = count($list_message)-1; $i >= 0; $i --) {
-              $user = $list_message[$i][0];
-              $mess = $list_message[$i][1];
-
               ?>
               <fieldset class="users_messages">
               <?php
-              echo "<legend> $user :</legend>";
-              echo "<p> $mess</p>";
+              echo "<legend> $messages[0] :</legend>";
+              echo "<p> $messages[1]</p>";
               ?>
               </fieldset>
               <?php
-
             }
-            
             ?>
             
           </div>

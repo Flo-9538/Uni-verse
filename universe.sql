@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 25 avr. 2024 à 22:17
+-- Généré le : lun. 29 avr. 2024 à 11:08
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -38,8 +38,9 @@ CREATE TABLE `messages` (
 --
 
 INSERT INTO `messages` (`id`, `user`, `message`) VALUES
-(2, 'flo', 'les ordinateurs kantiks >>>>>>> arduino >>>> les maths'),
-(4, 'pipi', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+(6, 'test', 'hey guys'),
+(7, 'test', 'this is a test'),
+(8, 'raphatex', 'coucou');
 
 -- --------------------------------------------------------
 
@@ -59,9 +60,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(1, 'raphatex', 'raphael.texier', 'Wendylabest45'),
-(2, 'wendy', 'wendy.juju', 'Raphouleplusbo123'),
-(4, 'test', 'test', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
+(4, 'test', 'test', '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
+(5, 'raphatex', 'raphael.texier', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
 
 --
 -- Index pour les tables déchargées
@@ -87,13 +87,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
