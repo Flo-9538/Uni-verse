@@ -41,9 +41,9 @@ if(isset($_POST['ok'])){
         </div>
         <div class="messages">
           <form method="POST" id="ecrire">
-            <fieldset id="passwordField">
+            <fieldset id="messageField">
               <legend>Ecrire un nouveau message :</legend>
-              <input type="text" name="message" id="ecrire_message" title="ecrivez votre message" required>
+              <textarea oninput="auto_grow(this)" name="message" id="ecrire_message" title="ecrivez votre message" autocomplete="off" maxlength="999" required></textarea>
             </fieldset>
             <input type="submit" id="envoyer" name="ok">
           </form>
@@ -64,11 +64,10 @@ if(isset($_POST['ok'])){
               <fieldset class="users_messages">
               <?php
               echo "<legend> $user :</legend>";
-              echo "<p> $mess</p>";
+              echo "<pre> $mess</pre>";
               ?>
               </fieldset>
               <?php
-
             }
             
             ?>
@@ -107,5 +106,12 @@ if(isset($_POST['ok'])){
         <div class="espace-droit">espace droit</div>
       </div>
     </div>
+    <script>
+      function auto_grow(element) {
+        element.style.height = "5px";
+        element.style.height = (element.scrollHeight) + "px";
+      }
+    </script>
+
   </body>
 </html>
