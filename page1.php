@@ -41,13 +41,21 @@ if(isset($_POST['ok'])){
           </div>
         </div>
         <div class="messages">
-          <form method="POST" id="ecrire">
-            <fieldset id="passwordField">
-              <legend>Ecrire un nouveau message :</legend>
-              <input type="text" name="message" id="ecrire_message" title="ecrivez votre message" required>
-            </fieldset>
-            <input type="submit" id="envoyer" name="ok">
-          </form>
+          
+          <?php
+          if (isset($_SESSION['connecte'])){
+            ?>
+            <form method="POST" id="ecrire">
+              <fieldset id="passwordField">
+                <legend>Ecrire un nouveau message :</legend>
+                <input type="text" name="message" id="ecrire_message" title="ecrivez votre message" required>
+              </fieldset>
+              <input type="submit" id="envoyer" name="ok">
+            </form>
+            <?php
+          }
+          ?>
+
           <div id="message">
             
             <?php
