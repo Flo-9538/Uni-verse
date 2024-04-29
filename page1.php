@@ -41,7 +41,9 @@ if(isset($_POST['ok'])){
           </div>
         </div>
         <div class="messages">
-<<<<<<< HEAD
+        <?php
+          if (isset($_SESSION['connecte'])){
+            ?>
           <form method="POST" id="ecrire">
             <fieldset id="messageField">
               <legend>Ecrire un nouveau message :</legend>
@@ -49,37 +51,18 @@ if(isset($_POST['ok'])){
             </fieldset>
             <input type="submit" id="envoyer" name="ok">
           </form>
-=======
-          
           <?php
-          if (isset($_SESSION['connecte'])){
-            ?>
-            <form method="POST" id="ecrire">
-              <fieldset id="passwordField">
-                <legend>Ecrire un nouveau message :</legend>
-                <input type="text" name="message" id="ecrire_message" title="ecrivez votre message" required>
-              </fieldset>
-              <input type="submit" id="envoyer" name="ok">
-            </form>
-            <?php
           }
           ?>
-
->>>>>>> cc83e558502a38b75d26a5691111e8099dd6f13f
+          
           <div id="message">
-            
             <?php
             while ($messages = $get_messages->fetch()) {
               ?>
               <fieldset class="users_messages">
               <?php
-<<<<<<< HEAD
-              echo "<legend> $user :</legend>";
-              echo "<pre> $mess</pre>";
-=======
               echo "<legend> $messages[0] :</legend>";
               echo "<p> $messages[1]</p>";
->>>>>>> cc83e558502a38b75d26a5691111e8099dd6f13f
               ?>
               </fieldset>
               <?php
