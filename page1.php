@@ -3,9 +3,10 @@ session_start();
 
 include 'bdd.php';
 
-$get_messages = $bdd->query("SELECT `user`,`message` FROM `messages`");
+$get_messages = $bdd->query("SELECT `user`,`message` FROM `messages` ORDER BY `id` DESC");
 
 if(isset($_POST['ok'])){
+  // on va envoyer un message
     $message = $_POST['message'];
     // récupération des champs du form 
 
@@ -40,6 +41,7 @@ if(isset($_POST['ok'])){
           </div>
         </div>
         <div class="messages">
+<<<<<<< HEAD
           <form method="POST" id="ecrire">
             <fieldset id="messageField">
               <legend>Ecrire un nouveau message :</legend>
@@ -47,29 +49,41 @@ if(isset($_POST['ok'])){
             </fieldset>
             <input type="submit" id="envoyer" name="ok">
           </form>
+=======
+          
+          <?php
+          if (isset($_SESSION['connecte'])){
+            ?>
+            <form method="POST" id="ecrire">
+              <fieldset id="passwordField">
+                <legend>Ecrire un nouveau message :</legend>
+                <input type="text" name="message" id="ecrire_message" title="ecrivez votre message" required>
+              </fieldset>
+              <input type="submit" id="envoyer" name="ok">
+            </form>
+            <?php
+          }
+          ?>
+
+>>>>>>> cc83e558502a38b75d26a5691111e8099dd6f13f
           <div id="message">
             
             <?php
-            $i = 0;
             while ($messages = $get_messages->fetch()) {
-              $list_message[$i] = $messages;
-              $i += 1;
-            }
-
-            for ($i = count($list_message)-1; $i >= 0; $i --) {
-              $user = $list_message[$i][0];
-              $mess = $list_message[$i][1];
-
               ?>
               <fieldset class="users_messages">
               <?php
+<<<<<<< HEAD
               echo "<legend> $user :</legend>";
               echo "<pre> $mess</pre>";
+=======
+              echo "<legend> $messages[0] :</legend>";
+              echo "<p> $messages[1]</p>";
+>>>>>>> cc83e558502a38b75d26a5691111e8099dd6f13f
               ?>
               </fieldset>
               <?php
             }
-            
             ?>
             
           </div>
