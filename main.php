@@ -61,7 +61,7 @@ if(isset($_POST['ok'])){
               <span class="date">
               <?php
               echo "$messages[2]</span> :</legend>";
-              echo "<pre> $messages[1]</pre>";
+              echo "<pre>$messages[1]</pre>";
               ?>
               </fieldset>
               <?php

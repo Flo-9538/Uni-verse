@@ -51,7 +51,7 @@ if(isset($_POST['ok'])){
         $_SESSION['password'] = $password;
         $_SESSION['id'] = $id;
         $_SESSION['connecte'] = 1;
-        header("Location: Page1.php");
+        header("Location: general.php");
     }
 }
 ?>
@@ -66,7 +66,7 @@ if(isset($_POST['ok'])){
     <title>Créer un compte</title>
 </head>
 <body>
-    <a href="page1.php"><img id="UnivTours"
+    <a href="general.php"><img id="UnivTours"
         title="CAS"
         src="Logo_Uni-verse.png"/></a>
 

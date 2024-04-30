@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $_SESSION['username'] = $rep['username'];
                 $_SESSION['connecte'] = 1;
 
-                header("Location: Page1.php");
+                header("Location: general.php");
             }
             else{
                 $error_msg = "Email ou mot de passe incorrect !";
@@ -44,7 +44,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
     
-    <a href="page1.php"><img id="UnivTours"
+    <a href="general.php"><img id="UnivTours"
         title="CAS"
         src="Logo_Uni-verse.png"/></a>
 
