@@ -35,7 +35,7 @@ if(isset($_POST['ok'])){
           </div>
         </div>
         <div class="messages">
-        <?php
+          <?php
           if (isset($_SESSION['connecte'])){
             ?>
           <form method="POST" id="ecrire">
@@ -54,12 +54,13 @@ if(isset($_POST['ok'])){
             while ($messages = $get_messages->fetch()) {
               ?>
               <fieldset class="users_messages">
+              <legend><span class="username">
               <?php
-              echo "<legend> $messages[0] $messages[2] :</legend>";
+              echo "$messages[0]</span>";
               ?>
-              <p class="date">
+              <span class="date">
               <?php
-              echo "$messages[2]</p>";
+              echo "$messages[2]</span> :</legend>";
               echo "<p> $messages[1]</p>";
               ?>
               </fieldset>
