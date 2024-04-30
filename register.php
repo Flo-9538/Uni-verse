@@ -34,7 +34,7 @@ if(isset($_POST['ok'])){
 
     if($bool1){
         // tout est ok
-        $requete = $bdd->prepare("INSERT INTO users VALUES(0, :username, :email, :password, 0)");
+        $requete = $bdd->prepare("INSERT INTO users VALUES(0, :username, :email, :password, 0, 0)");
         // requete sql pour la bdd
         $requete->execute(
             array(
@@ -46,11 +46,18 @@ if(isset($_POST['ok'])){
         
         $req = $bdd->query("SELECT 'id' FROM users WHERE email = '$email' AND password = '$password'");
         $id = $req->fetch();
+        $id = $id[0];
+        echo $id;
+
+        $id_coded = sha1(strval($id));
+        $req = $bdd->query("UPDATE users SET id_coded='$id_coded' WHERE id=$id");
+        $req->fetch();
+
         $_SESSION['id'] = $id;
         $_SESSION['email'] = $email;
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
-        header("Location: attente.html");
+        //header("Location: attente.html");
     }
 }
 ?>
