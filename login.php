@@ -9,7 +9,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // récupération des champs du form 
 
     if($email != "" && $password != ""){
-        $req = $bdd->query("SELECT * FROM users WHERE email = '$email' AND password = '$password'");
+        $req = $bdd->query("SELECT * FROM users WHERE email = '$email' AND password = '$password' AND active = 1");
         // requete sql pour la bdd
         $rep = $req->fetch();
         if ($rep){
