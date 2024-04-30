@@ -4,8 +4,7 @@ session_start();
 include 'bdd.php';
 
 $id = $_SESSION['id'];
-echo $id;
-$req = $bdd->query("UPDATE users SET active=1 WHERE id='6'");
+$req = $bdd->query("UPDATE `users` SET `active`=1 WHERE `id`='$id'");
 $req->fetch();
 
 $_SESSION['connecte'] = 1;

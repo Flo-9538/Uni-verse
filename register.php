@@ -1,5 +1,7 @@
 <?php
 session_start();
+session_destroy();
+session_start();
 
 include 'bdd.php';
 
@@ -44,10 +46,9 @@ if(isset($_POST['ok'])){
             )
         );
         
-        $req = $bdd->query("SELECT 'id' FROM users WHERE email = '$email' AND password = '$password'");
-        $id = $req->fetch();
-        $id = $id[0];
-        echo $id;
+        $req = $bdd->query("SELECT `id` FROM `users` WHERE `email` = '$email' AND `password` = '$password'");
+        $id_list = $req->fetch();
+        $id = $id_list[0];
 
         $id_coded = sha1(strval($id));
         $req = $bdd->query("UPDATE users SET id_coded='$id_coded' WHERE id=$id");
@@ -57,7 +58,7 @@ if(isset($_POST['ok'])){
         $_SESSION['email'] = $email;
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
-        //header("Location: attente.html");
+        header("Location: attente.html");
     }
 }
 ?>
