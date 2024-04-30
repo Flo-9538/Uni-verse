@@ -58,6 +58,9 @@ if(isset($_POST['ok'])){
         $_SESSION['email'] = $email;
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
+
+        // envoit du mail
+
         header("Location: attente.html");
     }
 }

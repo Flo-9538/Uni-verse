@@ -3,8 +3,10 @@ session_start();
 
 include 'bdd.php';
 
+$id_coded = $_GET['id'];
+
 $id = $_SESSION['id'];
-$req = $bdd->query("UPDATE `users` SET `active`=1 WHERE `id`='$id'");
+$req = $bdd->query("UPDATE `users` SET `active`=1 WHERE `id_coded`='$id_coded'");
 $req->fetch();
 
 $_SESSION['connecte'] = 1;
