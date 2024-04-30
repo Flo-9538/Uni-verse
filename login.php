@@ -9,11 +9,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // récupération des champs du form 
 
     if($email != "" && $password != ""){
-        $req = $bdd->query("SELECT * FROM users WHERE email = '$email' AND password = '$password' AND active = 1");
+        $req = $bdd->query("SELECT * FROM users WHERE email = '$email' AND password = '$password'");
         // requete sql pour la bdd
         $rep = $req->fetch();
         if ($rep){
-            if($rep['id'] != false){
+            if($rep['active'] == 0){
+                $error_msg = "Votre compte n'est pas encore activé !";
+            }
+            else if($rep['id'] != false){
                 // c'est ok
                 $_SESSION['email'] = $email;
                 $_SESSION['password'] = $password;
@@ -27,7 +30,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $error_msg = "Email ou mot de passe incorrect !";
             }
         }
-        $error_msg = "Email ou mot de passe incorrect !";
+        else{
+            $error_msg = "Email ou mot de passe incorrect !";
+        }
     }
 }
 ?>

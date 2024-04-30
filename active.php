@@ -3,7 +3,7 @@ session_start();
 
 include 'bdd.php';
 
-$id = $_SESSION['id']
+$id = $_SESSION['id'];
 $req = $bdd->query("UPDATE users SET active=1 WHERE id='$id'");
 $req->fetch();
 

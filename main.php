@@ -1,4 +1,8 @@
 <?php
+session_start();
+
+include 'bdd.php';
+
 if(isset($_POST['ok'])){
   // on va envoyer un message
     $message = $_POST['message'];
