@@ -108,7 +108,7 @@ if(isset($_POST['ok'])){
               <a href="index.php?categorie=general">Pharmacie</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="index.php?categorie=general">Géologie :<</a>
+              <a href="index.php?categorie=general">Géologie</a>
             </li>
             <li class="element_liste_catégories">
               <a href="index.php?categorie=general">Droit</a>
