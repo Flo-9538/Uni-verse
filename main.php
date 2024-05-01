@@ -79,10 +79,55 @@ if(isset($_POST['ok'])){
               <a href="general.php">general</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="maths.php">Maths</a>
+              <a href="mathématiques.php">Mathématiques</a>
             </li>
             <li class="element_liste_catégories">
               <a href="physique.php">Physique</a>
+            </li>
+            <li class="element_liste_catégories">
+              <a href="informatique.php">Informatique</a>
+            </li>
+            <li class="element_liste_catégories">
+              <a href="economie.php">Chimie</a>
+            </li>
+            <li class="element_liste_catégories">
+              <a href="medecine.php">Médecine</a>
+            </li>
+            <li class="element_liste_catégories">
+              <a href="pharmacie.php">Pharmacie</a>
+            </li>
+            <li class="element_liste_catégories">
+              <a href="geologie.php">Géologie :<</a>
+            </li>
+            <li class="element_liste_catégories">
+              <a href="droit.php">Droit</a>
+            </li>
+            <li class="element_liste_catégories">
+              <a href="economie.php">Economie</a>
+            </li>
+            <li class="element_liste_catégories">
+              <a href="ss.php">Sciences sociales</a>
+            </li>
+            <li class="element_liste_catégories">
+              <a href="ll.php">Lettres et langues</a>
+            </li>
+            <li class="element_liste_catégories">
+              <a href="philosophie.php">Philosophie</a>
+            </li>
+            <li class="element_liste_catégories">
+              <a href="psychologie.php">Psychologie</a>
+            </li>
+            <li class="element_liste_catégories">
+              <a href="arts.php">Arts</a>
+            </li>
+            <li class="element_liste_catégories">
+              <a href="musique.php">Musique</a>
+            </li>
+            <li class="element_liste_catégories">
+              <a href="agronomie.php">Agronomie</a>
+            </li>
+            <li class="element_liste_catégories">
+              <a href="cpes.php">CPES</a>
             </li>
           </ul>
         </div>
