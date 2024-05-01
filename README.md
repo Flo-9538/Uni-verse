@@ -6,16 +6,16 @@ En effet
 
 On uiliseras les images pour expliquer
 
-![pas connecté](https://github.com/Flo-9538/Uni-verse/blob/main/Readme_pasconnecte.png)
+![pas connecté](Readme_pasconnecte.png)
 
-![connexion](https://github.com/Flo-9538/Uni-verse/blob/main/Readme_connexion.png)
+![connexion](Readme_connexion.png)
 
-![inscription](https://github.com/Flo-9538/Uni-verse/blob/main/Readme_inscription.png)
+![inscription](Readme_inscription.png)
 
-![attente de validation](https://github.com/Flo-9538/Uni-verse/blob/main/Readme_attentevalidation.png)
+![attente de validation](Readme_attentevalidation.png)
 
-![connexion de Charlie](https://github.com/Flo-9538/Uni-verse/blob/main/Readme_connexioncharlie.png)
+![connexion de Charlie](Readme_connexioncharlie.png)
 
-![connecté](https://github.com/Flo-9538/Uni-verse/blob/main/Readme_connecte.png)
+![connecté](Readme_connecte.png)
 
-![connecté](https://github.com/Flo-9538/Uni-verse/blob/main/Readme_messageenvoyé.png)
+![connecté](Readme_messageenvoyé.png)
