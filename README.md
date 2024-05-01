@@ -6,7 +6,7 @@ En effet
 
 On uiliseras les images pour expliquer
 
-![pas connecté](https://github.com/Flo-9538/Uni-verse/blob/main/Readme_pasconnecte.png)
+![pas connecté](Readme_pasconnecte.png)
 
 ![connexion](https://github.com/Flo-9538/Uni-verse/blob/main/Readme_connexion.png)
 
