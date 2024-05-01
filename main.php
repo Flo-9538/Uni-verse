@@ -39,7 +39,7 @@ if(isset($_POST['ok'])){
         <div class="messages">
           <?php
           if (isset($_SESSION['connecte'])){
-            ?>
+          ?>
           <form method="POST" id="ecrire">
             <fieldset id="messageField">
               <legend>Ecrire un nouveau message :</legend>

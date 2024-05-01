@@ -1,0 +1,134 @@
+body{
+    background-color: rgb(233, 231, 231);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+#UnivTours{
+    width: 30%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+#connexion{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: large;
+    margin: 5% 1%;
+}
+
+#error{
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    text-align: center;
+    font-size: large;
+    margin: 5% 1%;
+}
+
+#center{
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    width: 600px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+#password{
+    font-size: large;
+    border: none;
+    padding: 10px;
+    width: 93%;
+    outline: none;
+    height: 25px;
+}
+
+.champs{
+    font-size: large;
+    border: none;
+    padding: 10px;
+    width: 70%;
+    outline: none;
+    height: 25px;
+}
+
+#passDiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+
+#gauche{
+    grid-column: 1;
+}
+
+#droite{
+    grid-column: 2;
+}
+
+fieldset{
+    font-size: small;
+    margin: 10px 0px;
+    padding: 1px;
+    border-radius: 5px;
+    color: rgb(75, 75, 75);
+}
+
+fieldset:hover{
+    color: black;
+}
+
+#passwordField{
+    width: 98%;
+}
+
+#showPass{
+    cursor: pointer;
+    margin: 17px 0px;
+    color: white;
+    /* https://cssgradient.io */
+    background: rgb(129, 22, 124);
+    border: none;
+    border-radius: 3px;
+    float: left;
+    height: 69%;
+    width: 23%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#showPass:hover{
+    background: rgb(102, 27, 98);
+}
+
+#valider{
+    background: rgb(129, 22, 124);
+    color: white;
+    font-size: large;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+#valider:hover{
+    background: rgb(102, 27, 98);
+}
+
+#inscrire{
+    font-size: large;
+}
+
+#divinscrire{
+    margin: 15px 0px;
+    font-size: large;
+}
