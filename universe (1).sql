@@ -53,7 +53,7 @@ INSERT INTO `messages` (`id`, `user`, `message`, `category`, `date`) VALUES
 (13, 'test', 'jzduizahdiozahdpi', 'general', '2024-04-30 12:59:55'),
 (14, 'test', 'bonsoir,\r\ncomment allez vous ?\r\nbien cordialement\r\nRaphatex', 'general', '2024-04-30 13:11:32'),
 (15, 'test', 'cc', 'general', '2024-04-30 13:21:00'),
-(16, 'florent', 'hello c\'est moi\r\nFlorent', 'general', '2024-04-30 13:30:24'),
+(16, 'florent', "hello c'est moi\r\nFlorent", 'general', '2024-04-30 13:30:24'),
 (17, 'raphatex', 'coucou florent', 'general', '2024-04-30 13:31:08'),
 (18, 'raphatex', 'non pas encore\r\net florent ?', 'maths', '2024-04-30 13:31:33'),
 (19, 'florent', 'toujours pas les gars on devrait se dépêcher', 'maths', '2024-04-30 13:32:09');
