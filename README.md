@@ -2,7 +2,7 @@
 
 Le site Uni’verse est un espace commun pour tous les étudiants à l'université de Tours qui souhaitent échanger. C’est un forum qui leurs permet de communiquer et qui les relie entre eux, a la différences des autres réseaux sociaux, il permet de vérifier les identités des utilisateurs grace à leur mail étudiant.
 
-En effet
+En effet le site est constitué d'une page principale
 
 On uiliseras les images pour expliquer
 
