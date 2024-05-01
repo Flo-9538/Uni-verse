@@ -43,7 +43,7 @@ if(isset($_POST['ok'])){
           <form method="POST" id="ecrire">
             <fieldset id="messageField">
               <legend>Ecrire un nouveau message :</legend>
-              <textarea oninput="auto_grow(this)" name="message" id="ecrire_message" title="ecrivez votre message" autocomplete="off" maxlength="999" required></textarea>
+              <textarea oninput="auto_grow(this)" name="message" id="ecrire_message" wrap="hard" title="ecrivez votre message" autocomplete="off" maxlength="999" required></textarea>
             </fieldset>
             <input type="submit" id="envoyer" name="ok">
           </form>

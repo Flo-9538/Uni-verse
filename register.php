@@ -59,7 +59,8 @@ if(isset($_POST['ok'])){
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
 
-        // envoit du mail
+        // envoi du mail
+        // http://localhost/Uni-verse/active.php?key=$id_coded
 
         header("Location: attente.html");
     }
