@@ -21,7 +21,7 @@ $_SESSION['connecte'] = 1;
     <title>Compte validé</title>
 </head>
 <body>
-    <a href="general.php"><img id="UnivTours"
+    <a href="index.php"><img id="UnivTours"
         src="Logo_Uni-verse.png"
         width="200px"/></a>
 

@@ -12,7 +12,7 @@ session_start();
     <title>Profil</title>
 </head>
 <body>
-    <a href="general.php"><img id="UnivTours"
+    <a href="index.php"><img id="UnivTours"
         title="CAS"
         src="Logo_Uni-verse.png"
         width="200px"/></a>

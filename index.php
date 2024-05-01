@@ -1,4 +1,15 @@
 <?php
+include 'bdd.php';
+
+if(isset($_GET['categorie'])){
+  $page = $_GET['categorie'];
+}
+else{
+  $page = 'general';
+}
+
+$get_messages = $bdd->query("SELECT `user`,`message`,`date` FROM `messages` WHERE `category`='$page' ORDER BY `id` DESC");
+
 session_start();
 
 if(isset($_POST['ok'])){
@@ -16,7 +27,7 @@ if(isset($_POST['ok'])){
             "date" => date("Y-m-d")." ".date("H:i:s")
         )
     );
-    header("Location: ".$page.".php");
+    header("Location: index.php?categorie=".$page);
 }
 ?>
 
@@ -76,58 +87,58 @@ if(isset($_POST['ok'])){
           <h2 class="titre_catégories">Catégories:</h2>
           <ul class="liste_catégories" style="font-size: 25px">
             <li class="element_liste_catégories">
-              <a href="general.php">general</a>
+              <a href="index.php">general</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="mathématiques.php">Mathématiques</a>
+              <a href="index.php?categorie=maths">Mathématiques</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="physique.php">Physique</a>
+              <a href="index.php?categorie=physique">Physique</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="informatique.php">Informatique</a>
+              <a href="index.php?categorie=general">Informatique</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="economie.php">Chimie</a>
+              <a href="index.php?categorie=general">Chimie</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="medecine.php">Médecine</a>
+              <a href="index.php?categorie=general">Médecine</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="pharmacie.php">Pharmacie</a>
+              <a href="index.php?categorie=general">Pharmacie</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="geologie.php">Géologie :<</a>
+              <a href="index.php?categorie=general">Géologie :<</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="droit.php">Droit</a>
+              <a href="index.php?categorie=general">Droit</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="economie.php">Economie</a>
+              <a href="index.php?categorie=general">Economie</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="ss.php">Sciences sociales</a>
+              <a href="index.php?categorie=general">Sciences sociales</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="ll.php">Lettres et langues</a>
+              <a href="index.php?categorie=general">Lettres et langues</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="philosophie.php">Philosophie</a>
+              <a href="index.php?categorie=general">Philosophie</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="psychologie.php">Psychologie</a>
+              <a href="index.php?categorie=general">Psychologie</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="arts.php">Arts</a>
+              <a href="index.php?categorie=general">Arts</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="musique.php">Musique</a>
+              <a href="index.php?categorie=general">Musique</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="agronomie.php">Agronomie</a>
+              <a href="index.php?categorie=general">Agronomie</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="cpes.php">CPES</a>
+              <a href="index.php?categorie=general">CPES</a>
             </li>
           </ul>
         </div>

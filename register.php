@@ -77,7 +77,7 @@ if(isset($_POST['ok'])){
     <title>Créer un compte</title>
 </head>
 <body>
-    <a href="general.php"><img id="UnivTours"
+    <a href="index.php"><img id="UnivTours"
         title="CAS"
         src="Logo_Uni-verse.png"/></a>
 
