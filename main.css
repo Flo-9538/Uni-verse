@@ -155,9 +155,9 @@ pre{
 
 .gauche {
     margin-left: 10px;
-    height: 85vh;
     grid-row: 3;
     grid-column: 1;
+    height: fit-content;
 }
 
 .messages {

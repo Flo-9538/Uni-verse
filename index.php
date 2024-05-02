@@ -87,7 +87,7 @@ if(isset($_POST['ok'])){
           <h2 class="titre_catégories">Catégories:</h2>
           <ul class="liste_catégories" style="font-size: 25px">
             <li class="element_liste_catégories">
-              <a href="index.php">general</a>
+              <a href="index.php">General</a>
             </li>
             <li class="element_liste_catégories">
               <a href="index.php?categorie=maths">Mathématiques</a>
