@@ -96,49 +96,49 @@ if(isset($_POST['ok'])){
               <a href="index.php?categorie=physique">Physique</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="index.php?categorie=general">Informatique</a>
+              <a href="index.php?categorie=informatique">Informatique</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="index.php?categorie=general">Chimie</a>
+              <a href="index.php?categorie=chimie">Chimie</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="index.php?categorie=general">Médecine</a>
+              <a href="index.php?categorie=medecine">Médecine</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="index.php?categorie=general">Pharmacie</a>
+              <a href="index.php?categorie=pharmacie">Pharmacie</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="index.php?categorie=general">Géologie</a>
+              <a href="index.php?categorie=geologie">Géologie</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="index.php?categorie=general">Droit</a>
+              <a href="index.php?categorie=droit">Droit</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="index.php?categorie=general">Economie</a>
+              <a href="index.php?categorie=economie">Economie</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="index.php?categorie=general">Sciences sociales</a>
+              <a href="index.php?categorie=ss">Sciences sociales</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="index.php?categorie=general">Lettres et langues</a>
+              <a href="index.php?categorie=ll">Lettres et langues</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="index.php?categorie=general">Philosophie</a>
+              <a href="index.php?categorie=philosophie">Philosophie</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="index.php?categorie=general">Psychologie</a>
+              <a href="index.php?categorie=psychologie">Psychologie</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="index.php?categorie=general">Arts</a>
+              <a href="index.php?categorie=arts">Arts</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="index.php?categorie=general">Musique</a>
+              <a href="index.php?categorie=musique">Musique</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="index.php?categorie=general">Agronomie</a>
+              <a href="index.php?categorie=agronomie">Agronomie</a>
             </li>
             <li class="element_liste_catégories">
-              <a href="index.php?categorie=general">CPES</a>
+              <a href="index.php?categorie=cpes">CPES</a>
             </li>
           </ul>
         </div>
