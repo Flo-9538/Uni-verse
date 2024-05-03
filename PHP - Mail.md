@@ -6,7 +6,7 @@ $destinataire = "Gdepardieu@gmail.com"; // mail du user qui sign up (pas restrei
 $sujet = "Verification blabla"; // sujet du mail
 $message = "contenu message"; // contenu à savoir lien d'anthen et un petit message qui indique qu'il le cliquer
 $headers = "From: AdLaurent@gmail"; // boite mail à partir de laquelle l'email d'anthen sera envoyé (en-tête) 
-mail($destinataire,$sujet,$message,$headers)
+mail($destinataire,$sujet,$message,$headers);
 //fonction mail pour l'envoi de l'email de verif
 ?>
 ```
