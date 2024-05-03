@@ -14,23 +14,29 @@ body {
 
 .parent {
     display: grid;
-    grid-template-columns: 15% 5% 70% 10%;  /* correnspond au pourcentage d'espace pris par chaque clolonnes sur la largeur*/
+    grid-template-columns: 15% 5% 70% 10%;   /*correnspond au pourcentage d'espace pris par chaque clolonnes sur la largeur*/
+    /*grid-template-columns: repeat(auto-fit,minmax(180px,1fr));*/
     grid-template-rows: auto 1fr auto;
 }
 
 .titre_catégories {
     margin:0.5vw;
-    font-size: 2.5vw; /* l'unité vw permet à la taille du texte de s'adapter à la place qu'il a*/
+    font-size: 20px /*2.5vw;  l'unité vw permet à la taille du texte de s'adapter à la place qu'il a*/;
+    overflow:hidden
 }
 
 .liste_catégories {
-    padding-left: 1.7vw;
+    padding-left: /*40px*/ 1.7vw;
+    overflow:auto ;
 }
 
 .element_liste_catégories {
     padding-bottom:0.5vw ;
-    font-size: 1.4vw;
-    text-align: left;
+    /*font-size: 100%;*/
+    font-size: 20px;
+    /*font-size: 1.4vw;*/
+    text-align: justify;
+    
 }
 
 #ecrire{
@@ -44,6 +50,8 @@ body {
     border-radius: 20px;
     padding: 15px;
     margin-top: 15px;
+    text-align: justify;
+    overflow: auto;
 }
 
 #messageField{
@@ -81,11 +89,13 @@ body {
 }
 
 .users_messages{
-    font-size: 1.1vw;
+    font-size: 20px;
+    /*font-size: 1.1vw;*/
     margin: 10px 0px;
     border-radius: 10px;
     color: rgb(0, 0, 0);
     width: fit-content;
+    height: fit-content;
 }
 
 .date{
@@ -176,7 +186,7 @@ pre{
 
 .espace-bas {
     display: none;
-    height: 4vh; 
+    /*height: 4vh;*/ 
     grid-row: 4; /*bon le total des vh fait 99 j'ai ajusté pour pas avoir de scroll vertical (à cause des bodures je pense) */
     grid-column: 1/5;
 }
