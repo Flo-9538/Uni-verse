@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 30 avr. 2024 à 20:47
+-- Généré le : ven. 03 mai 2024 à 17:07
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -24,6 +24,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `messages`
+--
+
+CREATE TABLE `messages` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `message` text NOT NULL,
+  `category` varchar(255) NOT NULL,
+  `date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `messages`
+--
+
+INSERT INTO `messages` (`id`, `user_id`, `message`, `category`, `date`) VALUES
+(1, 1, 'Ceci est le salon consacré aux mathématiques', 'maths', '2024-05-03 17:02:29'),
+(2, 1, 'Bonjour à toutes et à tous !', 'general', '2024-05-03 17:03:17'),
+(3, 1, 'Bienvenue sur Uni-Verse,\r\nIci vous êtes sur le salon \"général\" visible par tous les internautes', 'general', '2024-05-03 17:04:41'),
+(4, 25, 'Bonjour tout le monde !', 'general', '2024-05-03 17:06:07'),
+(5, 25, 'La physique c\'est trop bien', 'physique', '2024-05-03 17:06:28'),
+(6, 25, '4 + 4 = 8', 'maths', '2024-05-03 17:06:38');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `users`
 --
 
@@ -37,53 +63,29 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Structure de la table `messages`
+-- Déchargement des données de la table `users`
 --
 
-CREATE TABLE `messages` (
-  `id` int(11) NOT NULL,  
-  `user` varchar(255) NOT NULL,
-  `message` text NOT NULL,
-  `category` varchar(255) NOT NULL,
-  `date` datetime NOT NULL,
-  `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `active`, `id_coded`) VALUES
+(1, 'raphatex', 'raphael.texier', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, '4d134bc072212ace2df385dae143139da74ec0ef'),
+(25, 'flo37', 'flo', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 'f6e1126cedebf23e1463aee73f9df08783640400');
 
-
--- ------------------------------------------------------
 --
--- Index pour la table `users`
+-- Index pour les tables déchargées
 --
-
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `messages`
 --
 ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Index pour la table `users`
+--
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
-
-ALTER TABLE `messages`
-  ADD FOREIGN KEY (`user_id`) REFERENCES `users`(`id`);
-
-
--- --------------------------------------------------------
---
--- Déchargement des données de la table `users`
---
-
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `active`, `id_coded`) VALUES
-(1, 'raphatex', 'raphael.texier', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, '4d134bc072212ace2df385dae143139da74ec0ef');
---
--- Déchargement des données de la table `messages`
---
-
-INSERT INTO `messages` (`id`, `user`, `message`, `category`, `date`,`user_id`) VALUES
-(1, 'raphatex', "Bonjour, bienvenue à tous sur Uni'verse, un lieu d'échange créé par des étudiants, pour les étudiants, j'espère que vous passerez un bon moment ici!", 'general', '2024-05-03 18:00:00',1);
-
-
--- ------------------------------------------------------
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
@@ -93,13 +95,23 @@ INSERT INTO `messages` (`id`, `user`, `message`, `category`, `date`,`user_id`) V
 -- AUTO_INCREMENT pour la table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `messages`
+--
+ALTER TABLE `messages`
+  ADD CONSTRAINT `messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -8,7 +8,7 @@ else{
   $page = 'general';
 }
 
-$get_messages = $bdd->query("SELECT `user`,`message`,`date` FROM `messages` WHERE `category`='$page' ORDER BY `id` DESC");
+$get_messages = $bdd->query("SELECT `username`,`message`,`date` FROM `messages` INNER JOIN `users` ON messages.user_id = users.id WHERE `category`='$page' ORDER BY messages.id DESC");
 
 session_start();
 
@@ -17,11 +17,11 @@ if(isset($_POST['ok'])){
     $message = $_POST['message'];
     // récupération des champs du form 
 
-    $requete = $bdd->prepare("INSERT INTO messages VALUES(0, :user, :message, :category, :date)");
+    $requete = $bdd->prepare("INSERT INTO messages VALUES(0, :user_id, :message, :category, :date)");
     // requete sql pour la bdd
     $requete->execute(
         array(
-            "user" => $_SESSION['username'],
+            "user_id" => $_SESSION['id'],
             "message" => $message,
             "category" => $page,
             "date" => date("Y-m-d")." ".date("H:i:s")
