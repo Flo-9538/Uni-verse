@@ -64,20 +64,25 @@ if(isset($_POST['ok'])){
           
           <div id="message">
             <?php
-            while ($messages = $get_messages->fetch()) {
-              ?>
-              <fieldset class="users_messages">
-              <legend><span class="username">
-              <?php
-              echo "$messages[0]</span>";
-              ?>
-              <span class="date">
-              <?php
-              echo "$messages[2]</span> :</legend>";
-              echo "<pre>$messages[1]</pre>";
-              ?>
-              </fieldset>
-              <?php
+            if (isset($_SESSION['connecte']) or $page == 'general'){
+              while ($messages = $get_messages->fetch()) {
+                ?>
+                <fieldset class="users_messages">
+                <legend><span class="username">
+                <?php
+                echo "$messages[0]</span>";
+                ?>
+                <span class="date">
+                <?php
+                echo "$messages[2]</span> :</legend>";
+                echo "<pre>$messages[1]</pre>";
+                ?>
+                </fieldset>
+                <?php
+              }
+            }
+            else{
+              echo "Vous devez être connecté pour visionner ces messages.";
             }
             ?>
             

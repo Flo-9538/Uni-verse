@@ -6,7 +6,7 @@ En effet le site est constitué d'une page principale, avec différents salons "
 
 ![pas connecté](Readme_pasconnecte.png)
 
-Tant que l'utilisateur n'est pas connecté, il ne peut pas envoyer de messages. Il doit donc ce connecter avec le bouton en haut à droite.
+Tant que l'utilisateur n'est pas connecté, il ne peut pas envoyer de messages. Il doit donc se connecter avec le bouton en haut à droite.
 
 ![connexion](Readme_connexion.png)
 
@@ -14,7 +14,7 @@ Si il n'a pas encore de compte il peut s'inscrire, il doit alors renseigner le p
 
 ![inscription](Readme_inscription.png)
 
-Il recevra alors un mail de confirmation pour son inscription.
+Il recevra alors un mail de confirmation à son mail étudiant pour son inscription. Cette étape permet de vérifier que l'étudiant fait bien partie de l'université de Tours
 
 ![attente de validation](Readme_attentevalidation.png)
 
