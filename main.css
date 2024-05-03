@@ -172,6 +172,7 @@ pre{
 }
 
 .messages {
+    min-width: 60vw;
     width: fit-content;
     height: fit-content;
     grid-row: 3;
