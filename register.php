@@ -60,7 +60,11 @@ if(isset($_POST['ok'])){
         $_SESSION['password'] = $password;
 
         // envoi du mail
-        // http://localhost/Uni-verse/active.php?key=$id_coded
+        $destinataire = $email."@etu.univ-tours.fr"; // mail du user qui sign up (pas restreint qu'au gmail)
+        $sujet = "Verification nouvel utilisateur Uni-Verse"; // sujet du mail
+        $message = "Veuillez cliquer sur ce lien pour valider votre compte Uni-Verse.\r\nhttp://localhost/Uni-verse/active.php?key=".$id_coded
+        $headers = "From: AdLaurent@gmail"; // boite mail à partir de laquelle l'email d'anthen sera envoyé (en-tête) 
+        mail($destinataire,$sujet,$message,$headers)
 
         header("Location: attente.html");
     }
