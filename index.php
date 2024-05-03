@@ -81,6 +81,9 @@ if(isset($_POST['ok'])){
                 <?php
               }
             }
+            else{
+              echo "Vous devez être connecté pour visionner ces messages.";
+            }
             ?>
             
           </div>
