@@ -41,19 +41,20 @@ CREATE TABLE `users` (
 --
 
 CREATE TABLE `messages` (
-  `id` int(11) NOT NULL,
-  `user-id` int(11) NOT NULL,
-  `username` varchar(255) NOT NULL,
+  `id` int(11) NOT NULL,  
+  `user` varchar(255) NOT NULL,
   `message` text NOT NULL,
   `category` varchar(255) NOT NULL,
-  `date` datetime NOT NULL
+  `date` datetime NOT NULL,
+  `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
-----------------------------------------------------------
+-- ------------------------------------------------------
 --
 -- Index pour la table `users`
 --
+
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
@@ -64,7 +65,7 @@ ALTER TABLE `messages`
   ADD PRIMARY KEY (`id`);
 
 ALTER TABLE `messages`
-  ADD FOREIGN KEY (`user-id`) REFERENCES `users`(`id`);
+  ADD FOREIGN KEY (`user_id`) REFERENCES `users`(`id`);
 
 
 -- --------------------------------------------------------
@@ -78,11 +79,11 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `active`, `id_coded`
 -- Déchargement des données de la table `messages`
 --
 
-INSERT INTO `messages` (`id`,`user-id`, `username`, `message`, `category`, `date`) VALUES
-(1, 1, 'raphatex', "Bonjour, bienvenue à tous sur Uni'verse, un lieu d'échange créé par des étudiants, pour les étudiants, j'espère que vous passerez un bon moment ici!", 'general', '2024-05-03 18:00:00');
+INSERT INTO `messages` (`id`, `user`, `message`, `category`, `date`,`user_id`) VALUES
+(1, 'raphatex', "Bonjour, bienvenue à tous sur Uni'verse, un lieu d'échange créé par des étudiants, pour les étudiants, j'espère que vous passerez un bon moment ici!", 'general', '2024-05-03 18:00:00',1);
 
 
---------------------------------------------------------
+-- ------------------------------------------------------
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
